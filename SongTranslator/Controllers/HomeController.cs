@@ -26,7 +26,18 @@ namespace SongTranslator.Controllers
 
         private String GenerateWhatSheMeant(string whatSheSaid)
         {
-            var words = whatSheSaid.Split(' ').ToList();
+            var sentences = whatSheSaid.Split('.').ToList();
+            var newSentences = new List<String>();
+            foreach(var sentence in sentences)
+            {
+                newSentences.Add(ScrambleSentence(sentence));
+            }
+            return String.Join(". ", newSentences);
+        }
+
+        private static string ScrambleSentence(string sentence)
+        {
+            var words = sentence.Split(' ').ToList();
             var newWords = new string[words.Count];
             Random rand = new Random();
 

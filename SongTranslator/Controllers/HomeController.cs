@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -50,7 +51,19 @@ namespace SongTranslator.Controllers
                 index++;
             }
 
-            return String.Join(" ", newWords);
+            var newSentence = String.Join(" ", newWords).Replace("Geoffrey", "Deoffrey").Replace("Malinda", "Amanda");
+            return UppercaseFirst(newSentence);
+        }
+
+        private static string UppercaseFirst(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            char[] a = s.ToCharArray();
+            a[0] = char.ToUpper(a[0]);
+            return new string(a);
         }
 
         private string ScrambleWord(string word)

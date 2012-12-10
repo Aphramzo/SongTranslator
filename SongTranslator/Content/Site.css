@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     color: #696969;
-    background: url('images/background.png') no-repeat bottom right fixed;
+    background: url('/background.png') no-repeat bottom right fixed;
 }
 
 a:link {

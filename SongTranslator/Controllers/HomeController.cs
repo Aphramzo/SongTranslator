@@ -31,7 +31,7 @@ namespace SongTranslator.Controllers
             var newSentences = new List<String>();
             foreach(var sentence in sentences)
             {
-                newSentences.Add(ScrambleSentence(sentence));
+                newSentences.Add(ScrambleSentence(LowercaseFirst(sentence.Trim())));
             }
             return String.Join(". ", newSentences);
         }
@@ -66,29 +66,18 @@ namespace SongTranslator.Controllers
             return new string(a);
         }
 
-        private string ScrambleWord(string word)
+        private static string LowercaseFirst(string s)
         {
-            char[] chars = new char[word.Length];
-            Random rand = new Random(10000);
-
-            int index = 0;
-
-            while (word.Length > 0)
+            if (string.IsNullOrEmpty(s))
             {
-                // Get a random number between 0 and the length of the word.
-                int next = rand.Next(0, word.Length - 1);
-
-                // Take the character from the random position and add to our char array.
-                chars[index] = word[next];
-
-                // Remove the character from the word.
-                word = word.Substring(0, next) + word.Substring(next + 1);
-
-                ++index;
+                return string.Empty;
             }
-
-            return new String(chars);
+            char[] a = s.ToCharArray();
+            a[0] = char.ToLower(a[0]);
+            return new string(a);
         }
+
+     
     
     }
 }

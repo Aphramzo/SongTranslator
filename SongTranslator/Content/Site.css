@@ -280,3 +280,13 @@ div#title {
 #whatDidSheSay {
     width: 80%;
 }
+
+.sheMeant {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.crazyAssLanguage {
+    font-size: 1.3em;
+    color: #000000;
+}

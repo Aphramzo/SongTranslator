@@ -2,12 +2,13 @@
     ViewBag.Title = "Song Translator";
 }
 
-<form>
+<form method="POST">
     <ul>
         <li>What did she say?:</li>
-        <li><textarea id="whatDidSheSay"></textarea></li>
-        <li><input type="submit" value="Let's find out!" /></li>
-        <li>She MIGHT mean this:</li>
+        <li><textarea id="whatDidSheSay" name="whatDidSheSay">@ViewBag.SheSaid</textarea></li>
+        <li><input type="submit" value="@ViewBag.ButtonText" /></li>
+        <li class="sheMeant">She MIGHT mean this:</li>
+        <li class="crazyAssLanguage">@ViewBag.SheMeant</li>
     </ul>
     
     

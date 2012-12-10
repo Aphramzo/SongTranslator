@@ -12,12 +12,59 @@ namespace SongTranslator.Controllers
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
+            if (!String.IsNullOrEmpty(Request.Params["whatDidSheSay"]))
+                ViewBag.SheMeant = GenerateWhatSheMeant(Request.Params["whatDidSheSay"]);
+            else
+                ViewBag.SheMeant = String.Empty;
+
+
+            ViewBag.SheSaid = Request.Params["whatDidSheSay"];
+            ViewBag.ButtonText = "Let's Find Out!";
+
             return View();
         }
 
-        public ActionResult About()
+        private String GenerateWhatSheMeant(string whatSheSaid)
         {
-            return View();
+            var words = whatSheSaid.Split(' ').ToList();
+            var newWords = new string[words.Count];
+            Random rand = new Random();
+
+            int index = 0;
+            while (words.Count > 0)
+            {
+                int next = rand.Next(0, words.Count);
+                newWords[index] = words[next];
+                words.RemoveAt(next);
+                index++;
+            }
+
+            return String.Join(" ", newWords);
         }
+
+        private string ScrambleWord(string word)
+        {
+            char[] chars = new char[word.Length];
+            Random rand = new Random(10000);
+
+            int index = 0;
+
+            while (word.Length > 0)
+            {
+                // Get a random number between 0 and the length of the word.
+                int next = rand.Next(0, word.Length - 1);
+
+                // Take the character from the random position and add to our char array.
+                chars[index] = word[next];
+
+                // Remove the character from the word.
+                word = word.Substring(0, next) + word.Substring(next + 1);
+
+                ++index;
+            }
+
+            return new String(chars);
+        }
+    
     }
 }

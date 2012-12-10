@@ -5,3 +5,5 @@ c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTrans
 c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\obj\Debug\ResolveAssemblyReference.cache
 c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\obj\Debug\SongTranslator.dll
 c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\obj\Debug\SongTranslator.pdb
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\bin\Content\images\background.png
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\bin\background.png

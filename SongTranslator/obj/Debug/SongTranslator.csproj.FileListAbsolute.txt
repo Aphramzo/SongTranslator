@@ -1,0 +1,7 @@
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\bin\SongTranslator.dll
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\bin\SongTranslator.pdb
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\bin\EntityFramework.dll
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\bin\EntityFramework.xml
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\obj\Debug\ResolveAssemblyReference.cache
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\obj\Debug\SongTranslator.dll
+c:\users\twalborn\documents\visual studio 2010\Projects\SongTranslator\SongTranslator\obj\Debug\SongTranslator.pdb

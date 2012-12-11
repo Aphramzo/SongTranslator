@@ -9,10 +9,9 @@ namespace SongTranslator.Controllers
 {
     public class HomeController : Controller
     {
+        private static Random rand = new Random();
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-
             if (!String.IsNullOrEmpty(Request.Params["whatDidSheSay"]))
                 ViewBag.SheMeant = GenerateWhatSheMeant(Request.Params["whatDidSheSay"]);
             else
@@ -40,7 +39,6 @@ namespace SongTranslator.Controllers
         {
             var words = sentence.Split(' ').ToList();
             var newWords = new string[words.Count];
-            Random rand = new Random();
 
             int index = 0;
             while (words.Count > 0)
